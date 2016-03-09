@@ -1,0 +1,19 @@
+<form action="/owned_pokemon" method="post">
+
+  <label for="pokemon_id">Select Pokemon:</label>
+    <select name="pokemon_id">
+      <% @pokemons.each do |pokemon| %>
+        <option value="<%= pokemon.id.to_i %>"><%= pokemon.name %></option>
+    <% end %>
+    </select>
+
+    <label for="trainer_id">Select trainer:</label>
+    <select name="trainer_id">
+      <% @trainers.each do |trainer| %>
+        <option value="<%= trainer.id.to_i %>"><%= trainer.name %></option>
+    <% end %>
+    </select>
+
+  <input type='submit' value="Join">
+
+</form>

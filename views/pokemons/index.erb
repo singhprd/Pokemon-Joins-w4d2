@@ -1,0 +1,17 @@
+<div class="content">
+
+<% @pokemons.each do |pokemon| %>
+
+<a href="/pokemons/<%= pokemon.id %>">
+  <p>Name:<%= pokemon.name %></p>
+</a>
+
+<hr>
+
+<% end %>
+
+<br>
+<br>
+<a href="/">Back</a>
+
+</div>
